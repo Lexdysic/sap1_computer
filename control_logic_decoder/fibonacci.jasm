@@ -1,0 +1,11 @@
+    mov a, #0
+    mov @100, a
+    mov a, #1
+    mov @101, a
+loop:
+    mov a, @100
+    add a, @101
+    mov @101, a
+    mov @100, b
+    out a
+    jmp @loop

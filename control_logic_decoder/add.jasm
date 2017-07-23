@@ -1,0 +1,6 @@
+    mov a, #14
+    add a, #28
+
+label:
+    out a
+    hlt

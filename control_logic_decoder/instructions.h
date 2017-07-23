@@ -12,9 +12,10 @@ Instruction("mov B, #23",   MI|CO,      RO|BI|CE)
 Instruction("mov B, A",     BI|AO)
 Instruction("mov @47, A",   MI|CO,      MI|RO|CE,   RI|AO)
 Instruction("mov @47, B",   MI|CO,      MI|RO|CE,   RI|BO)
-Instruction("mov @A, #23",  MI|AO) // TODO
+Instruction("mov @47, #23", MI|CO,      MI|RO|CE) // TODO
 Instruction("add A, @47",   MI|CO,      RO|MI|CE,   RO|BI,      AI|ALO)
 Instruction("add A, #23",   MI|CO,      RO|BI|CE,   AI|ALO)
 Instruction("sub A, @47",   MI|CO,      RO|MI|CE,   RO|BI,      AI|ALO|AL0)
 Instruction("sub A, #23",   MI|CO,      RO|BI|CE,   AI|ALO|AL0)
 Instruction("jmp #23",      MI|CO,      RO|CI)
+Instruction("jmp @lbl",     MI|CO,      RO|CI)

@@ -1,6 +1,6 @@
 #include <cpu_common.h>
 
-const int kChipIndex = 1;
+const int kChipIndex = 0;
 
 //==============================================================
 
