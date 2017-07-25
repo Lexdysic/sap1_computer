@@ -6,6 +6,8 @@ import sys
 
 #==============================================================================
 
+kInstructionPath = R"../instructions.h"
+
 kInstructionPattern = R'Instruction\("([^"]+)"'
 kInstructionRegex   = re.compile(kInstructionPattern)
 
@@ -72,7 +74,7 @@ def ErrorOut (message, filename=None, line=None):
 
 
 def Assemble (filename):
-    LoadMnemonics("instructions.h")
+    LoadMnemonics(kInstructionPath)
 
     for mnemonic in s_mnemonics:
         #print(mnemonic)

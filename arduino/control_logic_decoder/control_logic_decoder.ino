@@ -1,4 +1,4 @@
-#include <cpu_common.h>
+#include "../cpu_common.h"
 
 const int kChipIndex = 0;
 
