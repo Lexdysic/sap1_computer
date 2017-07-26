@@ -1,4 +1,4 @@
-#include "../cpu_common.h"
+#include "eeprom_common.h"
 
 
 static const byte kDigits[] = {
@@ -60,7 +60,7 @@ void WriteOutputDecoder () {
 void setup() {
   SetupForEEPROM();
 
-  WriteControlLogic(0);
+  WriteOutputDecoder();
   Dump();
 }
 

@@ -1,4 +1,4 @@
-#include "../cpu_common.h"
+#include "eeprom_common.h"
 
 const int kChipIndex = 0;
 
@@ -57,7 +57,7 @@ const uint32_t SKP = 0b100000000000000000000000;
 //==============================================================
 
 const uint32_t kLogic[] = {
-  #include "instructions.h"
+  #include "..\..\..\instructions.h"
 };
 const int32_t kLogicCount = sizeof(kLogic) / sizeof(uint32_t);
 
