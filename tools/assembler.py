@@ -6,7 +6,9 @@ import sys
 
 #==============================================================================
 
-kInstructionPath = R"../instructions.h"
+kProgramPath = os.path.dirname(os.path.realpath(__file__))
+
+kInstructionPath = os.path.join(kProgramPath, "..", "instructions.h")
 
 kInstructionPattern = R'Instruction\("([^"]+)"'
 kInstructionRegex   = re.compile(kInstructionPattern)
