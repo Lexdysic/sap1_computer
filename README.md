@@ -1,11 +1,18 @@
 # SAP1 Breadboard Computer
 The "Simple as Possible" design of computer.
 
-* 8-bit shared data/address bus
-* 256 bytes memory
-* Variable rate clock with manual step mode
-* Adds or subtracts
-* No conditional branches
+## Features
+* 8-bit shared data/address bus.
+* 256 bytes memory.
+* Variable rate clock, between 1hz and 10khz, with manual step mode.
+* Supports adding *and* subtracting!
+* Display in signed or unsigned mode.
 
+## Future Work
+* More ALU operations including OR, AND, XOR
+* Conditional Branching
+* Storage module
+
+## Current Progress
 ![Current Progress](docs/images/2017_07_20.jpg)
-![Current Progress](docs/images/current.jpg)
+![Block Diagram](docs/images/current.jpg)
