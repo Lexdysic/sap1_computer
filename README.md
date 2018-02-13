@@ -19,6 +19,15 @@ The "Simple as Possible" design of computer.
 
 ## Example
 
+**add.asm**
+```asm
+    mov a, #14
+    add a, #28
+label:
+    out a
+    hlt
+```
+
 **fibonacci.asm**
 ```asm
     mov a, #0
