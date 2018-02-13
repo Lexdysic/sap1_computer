@@ -19,6 +19,17 @@ The "Simple as Possible" design of computer.
 
 ## Instructions
 
+### Notation
+
+`[label:] <verb> [args...]`
+
+* `A` - Refers to the A-register.
+* `B` - Refers to the B-register.
+* `#lit` - A literal value given by the number `lit`, can be between 0 and 255.
+* `@loc` - Refers to a location- literal address or value at a labeled location.
+  * When `loc` is a number, this is considered an address in memory. Values between 0 and 255 are accepted as RAM is only 8-bit addressable.
+  * When `loc` is an identifier, this is either the name of a register or the name of a label. When the name of a register is used, the location is the memory address given by the value stored in the register. When a label is given, the location is computed by the assembler then inserted in place of the label.
+
 ### Utility
 
 | Instruction | Cycle Count | Description |
