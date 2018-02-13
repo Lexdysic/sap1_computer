@@ -19,6 +19,8 @@ The "Simple as Possible" design of computer.
 
 ## Instructions
 
+### Utility
+
 | `nop`    | |
 |-- |-- |
 | 2-cylces | No-operation will be executed for a single. |
@@ -26,6 +28,10 @@ The "Simple as Possible" design of computer.
 | `hlt` | |
 |-- |-- |
 | 3-cycles | Stop the cpu clock. No further operations will be run until reset button is pressed. |
+
+### Output
+
+`out <source>`
 
 | `out @47` | |
 |-- |-- |
@@ -42,6 +48,10 @@ The "Simple as Possible" design of computer.
 | `out B` | |
 |-- |-- |
 | 3-cycles | Output the value in the B-register. |
+
+### Move
+
+`move <target>, <source>`
 
 | `mov A, @47` | |
 |-- |-- |
@@ -75,9 +85,13 @@ The "Simple as Possible" design of computer.
 |-- |-- |
 | 5-cycles | Move the value in the B-register to the memory location given by a literal. |
 
-| mov @47, #23 | |
+| `mov @47, #23` | |
 |-- |-- |
 | Unimplemented | Move a literal value into the memory location given by a literal. |
+
+### Add
+
+`add <target>, <source>`
 
 | `add A, @47` | |
 |-- |-- |
@@ -87,6 +101,9 @@ The "Simple as Possible" design of computer.
 |-- |-- |
 | 5-cycles | Add a literal value to the value stored in the A-register, the result is stored back in the A-register. |
 
+### Sub
+
+`sub <target>, <source>`
 
 | `sub A, @47` | |
 |-- |-- |
@@ -95,6 +112,10 @@ The "Simple as Possible" design of computer.
 | `sub A, #23` | |
 |-- |-- |
 | 5-cycles | Subtract a literal value from the value stored in the A-register, the result is stored back in the A-register. |
+
+### Jump
+
+`jmp <target>`
 
 | `jmp #23` | |
 |-- |-- |
