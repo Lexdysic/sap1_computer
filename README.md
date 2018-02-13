@@ -17,6 +17,23 @@ The "Simple as Possible" design of computer.
 ![Current Progress](docs/images/2017_07_20.jpg)
 ![Block Diagram](docs/images/current.jpg)
 
+## Example
+
+**fibonacci.asm**
+```asm
+    mov a, #0
+    mov @99, a
+    mov a, #1
+    mov @100, a
+loop:
+    mov a, @99
+    add a, @100
+    mov @100, a
+    mov @99, b
+    out a
+    jmp @loop
+```
+
 ## Instructions
 
 ### Notation
