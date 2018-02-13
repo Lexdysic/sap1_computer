@@ -28,7 +28,7 @@ The "Simple as Possible" design of computer.
 
 ### Output
 
-`out <source>`
+`out <source>` - Sets the displayed value to be that of `<source>`.
 
 | Instruction | Cycle Count | Description |
 |---|---|---|
@@ -39,7 +39,7 @@ The "Simple as Possible" design of computer.
 
 ### Move
 
-`move <target>, <source>`
+`mov <target>, <source>` - Move a word value from one location to another. This instruction handles moving into and out of registers from memory, between registers, and setting literal values into the destination location.
 
 | Instruction | Cycle Count | Description |
 |---|---|---|
@@ -53,9 +53,9 @@ The "Simple as Possible" design of computer.
 | `mov @47, B` | 5-cycles | Move the value in the B-register to the memory location given by a literal. |
 | `mov @47, #23` | Unimplemented | Move a literal value into the memory location given by a literal. |
 
-### Add
+### Addition
 
-`add <target>, <source>`
+`add <target>, <source>` - Perform addition such that `A = A + <source>`
 
 
 | Instruction | Cycle Count | Description |
@@ -63,9 +63,9 @@ The "Simple as Possible" design of computer.
 | `add A, @47` | 6-cycles | Add the value at a literal memory location to the value stored in the A-register, the result is stored back in the A-register. |
 | `add A, #23` | 5-cycles | Add a literal value to the value stored in the A-register, the result is stored back in the A-register. |
 
-### Sub
+### Subtraction
 
-`sub <target>, <source>`
+`sub <target>, <source>` - Perform subtraction such that `A = A - <source>`.
 
 | Instruction | Cycle Count | Description |
 |---|---|---|
@@ -74,7 +74,7 @@ The "Simple as Possible" design of computer.
 
 ### Jump
 
-`jmp <target>`
+`jmp <target>` - Unconditionally update the Program Counter so the next cycle will read the instruction at `<target>` location in memory.
 
 | Instruction | Cycle Count | Description |
 |---|---|---|
