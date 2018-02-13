@@ -21,106 +21,62 @@ The "Simple as Possible" design of computer.
 
 ### Utility
 
-| `nop`    | |
-|-- |-- |
-| 2-cylces | No-operation will be executed for a single. |
-
-| `hlt` | |
-|-- |-- |
-| 3-cycles | Stop the cpu clock. No further operations will be run until reset button is pressed. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `nop` | 2-cylces | No-operation will be executed for a single. |
+| `hlt` | 3-cycles | Stop the cpu clock. No further operations will be run until reset button is pressed. |
 
 ### Output
 
 `out <source>`
 
-| `out @47` | |
-|-- |-- |
-| 5-cylces | Output the value at literal memory address. |
-
-| `out #23` | |
-|-- |-- |
-| 4-cylces | Output a literal value. |
-
-| `out A` | |
-|-- |-- |
-| 3-cycles | Output the value in the A-register. |
-
-| `out B` | |
-|-- |-- |
-| 3-cycles | Output the value in the B-register. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `out @47` | 5-cylces | Output the value at literal memory address. |
+| `out #23` | 4-cylces | Output a literal value. |
+| `out A` | 3-cycles | Output the value in the A-register. |
+| `out B` | 3-cycles | Output the value in the B-register. |
 
 ### Move
 
 `move <target>, <source>`
 
-| `mov A, @47` | |
-|-- |-- |
-| 4-cycles | Move the value at a literal memory address into the A-register. |
-
-| `mov A, #23` | |
-|-- |-- |
-| 4-cylces | Move a literal value into the A-register. |
-
-| `mov A, B` | |
-|-- |-- |
-| 3-cylces | Move the value in the B-register into the A-register. |
-
-| `mov B, @47` | |
-|-- |-- |
-| 4-cycles | Move the value at a literal memory address into the B-register. |
-
-| `mov B, #23` | |
-|-- |-- |
-| 4-cycles | Move a literal value into the B-register. |
-
-| `mov B, A` | |
-|-- |-- |
-| 3-cycles | Move the value in the A-register into the B-register. |
-
-| `mov @47, A` | |
-|-- |-- |
-| 5-cycles | Move the value in the A-register to the memory location given by a literal. |
-
-| `mov @47, B` | |
-|-- |-- |
-| 5-cycles | Move the value in the B-register to the memory location given by a literal. |
-
-| `mov @47, #23` | |
-|-- |-- |
-| Unimplemented | Move a literal value into the memory location given by a literal. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `mov A, @47` | 4-cycles | Move the value at a literal memory address into the A-register. |
+| `mov A, #23` | 4-cylces | Move a literal value into the A-register. |
+| `mov A, B` | 3-cylces | Move the value in the B-register into the A-register. |
+| `mov B, @47` | 4-cycles | Move the value at a literal memory address into the B-register. |
+| `mov B, #23` | 4-cycles | Move a literal value into the B-register. |
+| `mov B, A` | 3-cycles | Move the value in the A-register into the B-register. |
+| `mov @47, A` | 5-cycles | Move the value in the A-register to the memory location given by a literal. |
+| `mov @47, B` | 5-cycles | Move the value in the B-register to the memory location given by a literal. |
+| `mov @47, #23` | Unimplemented | Move a literal value into the memory location given by a literal. |
 
 ### Add
 
 `add <target>, <source>`
 
-| `add A, @47` | |
-|-- |-- |
-| 6-cycles | Add the value at a literal memory location to the value stored in the A-register, the result is stored back in the A-register. |
 
-| `add A, #23` | |
-|-- |-- |
-| 5-cycles | Add a literal value to the value stored in the A-register, the result is stored back in the A-register. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `add A, @47` | 6-cycles | Add the value at a literal memory location to the value stored in the A-register, the result is stored back in the A-register. |
+| `add A, #23` | 5-cycles | Add a literal value to the value stored in the A-register, the result is stored back in the A-register. |
 
 ### Sub
 
 `sub <target>, <source>`
 
-| `sub A, @47` | |
-|-- |-- |
-| 6-cycles | Subtract the value at a literal memory location from the value stored in the A-register, the result is stored back in the A-register. |
-
-| `sub A, #23` | |
-|-- |-- |
-| 5-cycles | Subtract a literal value from the value stored in the A-register, the result is stored back in the A-register. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `sub A, @47` | 6-cycles | Subtract the value at a literal memory location from the value stored in the A-register, the result is stored back in the A-register. |
+| `sub A, #23` | 5-cycles | Subtract a literal value from the value stored in the A-register, the result is stored back in the A-register. |
 
 ### Jump
 
 `jmp <target>`
 
-| `jmp #23` | |
-|-- |-- |
-| 4-cycles | Set a literal memory location as the next location to be executed. |
-
-| `jmp @lbl` | |
-|-- |-- |
-| 4-cycles | Set the next location to be executed to the memory location at a label. |
+| Instruction | Cycle Count | Description |
+|---|---|---|
+| `jmp #23` | 4-cycles | Set a literal memory location as the next location to be executed. |
+| `jmp @lbl` | 4-cycles | Set the next location to be executed to the memory location at a label. |
