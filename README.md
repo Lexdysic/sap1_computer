@@ -1,6 +1,9 @@
 # SAP1 Breadboard Computer
 The "Simple as Possible" design of computer.
 
+![Current Progress](docs/images/2017_07_20.jpg)
+![Block Diagram](docs/images/current.jpg)
+
 ## Features
 * 8-bit shared data/address bus.
 * 256 bytes memory.
@@ -13,17 +16,12 @@ The "Simple as Possible" design of computer.
 * Conditional Branching
 * Storage module
 
-## Current Progress
-![Current Progress](docs/images/2017_07_20.jpg)
-![Block Diagram](docs/images/current.jpg)
-
 ## Example
 
 **add.asm**
 ```asm
     mov a, #14
     add a, #28
-label:
     out a
     hlt
 ```
